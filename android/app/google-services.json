@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1015184821446",
+    "project_id": "parissamin-app",
+    "storage_bucket": "parissamin-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015184821446:android:c9d450926a6378f55adbc7",
+        "android_client_info": {
+          "package_name": "com.akila.parissamin_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015184821446-fra2v5mjm6jiqcb02e7latghpi5ehh5e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akila.parissamin_app",
+            "certificate_hash": "ce2b8b58656de0c4098b729a3898d6969043b69d"
+          }
+        },
+        {
+          "client_id": "1015184821446-4htjq0otipivt5is1drn48fkis46pss7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwTqDZ051gTz8F6tIrqE5H7KoZ5rQS5r8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015184821446-4htjq0otipivt5is1drn48fkis46pss7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
