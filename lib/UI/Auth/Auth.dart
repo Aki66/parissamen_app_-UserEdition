@@ -67,7 +67,7 @@ class _AuthState extends State<Auth> {
         //   image: AssetImage("assets/images/mainlogo.png"),
         // ),
         Container(
-          child: Image.asset('assets/images/Logo 01.png'),
+          child: Image.asset('assets/images/Logouser.png'),
           margin: const EdgeInsets.only(top: 70.0),
         ),
 
