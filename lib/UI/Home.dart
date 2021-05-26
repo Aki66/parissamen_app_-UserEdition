@@ -58,6 +58,29 @@ class _HomeState extends State<Home> {
     });
   }
 
+  final _text = TextEditingController();
+
+  // @override
+  // void dispose() {
+  //   _text.dispose();
+  //   super.dispose();
+  // }
+
+// validation testing
+
+  // bool validateTextField(String userInput) {
+  //   if (userInput.isEmpty) {
+  //     setState(() {
+  //       _validate = true;
+  //     });
+  //     return false;
+  //   }
+  //   setState(() {
+  //     _validate = false;
+  //   });
+  //   return true;
+  // }
+
   @override
   void initState() {
     checkIfNew();
@@ -123,13 +146,11 @@ class _HomeState extends State<Home> {
                       child: Column(
                         children: [
                           TextField(
-                            //style: TextStyle(color: Colors.white),
-
                             decoration: mainInputs(
                               'Name',
                             ),
-
                             controller: name,
+                            // errorText : _validate ? 'value cannot be Empty': null,
                           ),
                           SizedBox(
                             height: 16,
@@ -144,8 +165,7 @@ class _HomeState extends State<Home> {
                             height: 16,
                           ),
                           TextField(
-                            //decoration: mainInputs('NIC Number'),
-                            decoration: mainInputs('Police Area'),
+                            decoration: mainInputs('NIC Number'),
                             controller: nic,
                             cursorColor: Colors.black,
                           ),
@@ -173,6 +193,11 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         onPressed: () {
+                          // setState(() {
+                          //   _text.text.isEmpty
+                          //       ? _validate = true
+                          //       : _validate = false;
+                          // });
                           register();
                         },
                         child: Text('Register'),
