@@ -24,7 +24,6 @@ class _HomeState extends State<Home> {
   TextEditingController address = TextEditingController();
 
   bool ready = false;
-  bool _validate = false;
 
   void checkIfNew() async {
     await fStore
@@ -59,6 +58,7 @@ class _HomeState extends State<Home> {
   }
 
   final _text = TextEditingController();
+  // final _formKey = GlobalKey<FormState>();
 
   // @override
   // void dispose() {
@@ -150,6 +150,7 @@ class _HomeState extends State<Home> {
                               'Name',
                             ),
                             controller: name,
+
                             // errorText : _validate ? 'value cannot be Empty': null,
                           ),
                           SizedBox(
@@ -193,12 +194,22 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         onPressed: () {
-                          // setState(() {
-                          //   _text.text.isEmpty
-                          //       ? _validate = true
-                          //       : _validate = false;
-                          // });
-                          register();
+                          if (name.text.isEmpty ||
+                              contact.text.isEmpty ||
+                              nic.text.isEmpty ||
+                              address.text.isEmpty) {
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content: Text('Fill all the fields!'),
+                                backgroundColor: Colors.red));
+                          } else if (!contact.text.isNum) {
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content:
+                                    Text('please enter a valid phone number!'),
+                                backgroundColor: Colors.red));
+                          }
+                           else {
+                            register();
+                          }
                         },
                         child: Text('Register'),
                       ),
